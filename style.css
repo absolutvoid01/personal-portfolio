@@ -294,14 +294,41 @@ html {
     text-align: center;
 }
 
+
 .profile-frame {
     width: 160px;
     height: 160px;
     margin: 0;
     padding: 4px;
     border-radius: 50%;
-    background: linear-gradient(135deg, rgb(0, 198, 255), rgb(0, 114, 255));
+
+    background: linear-gradient(
+        135deg,
+        rgb(0, 198, 255),
+        rgb(0, 114, 255)
+    );
+
+    box-shadow:
+        0 0 12px rgba(0, 198, 255, 0.45),
+        0 0 28px rgba(0, 114, 255, 0.3);
+
+    animation: profileGlow 3s ease-in-out infinite;
 }
+
+@keyframes profileGlow {
+    0%, 100% {
+        box-shadow:
+            0 0 12px rgba(0, 198, 255, 0.4),
+            0 0 28px rgba(0, 114, 255, 0.25);
+    }
+
+    50% {
+        box-shadow:
+            0 0 20px rgba(0, 198, 255, 0.75),
+            0 0 45px rgba(0, 114, 255, 0.55);
+    }
+}
+
 
 .profile-img {
     display: block;
@@ -1208,3 +1235,4 @@ h4 {
         text-align: center;
     }
 }
+
